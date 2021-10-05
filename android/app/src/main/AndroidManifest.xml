@@ -15,7 +15,7 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:allowBackup="false"
     android:theme="@style/AppTheme"
-    android:usesCleartextTraffic="true"
+    android:usesCleartextTraffic="true" tools:targetApi="29"
   >
     <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value="https://exp.host/@rebisha/nutritious-recipes" />
     <meta-data android:name="expo.modules.updates.EXPO_SDK_VERSION" android:value="42.0.0" />

@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Index from './src/component/index';
+import NavBar from './src/component/navbar';
+import { Fonts } from './src/styles/fonts';
+import { View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+
+const App = () => {
+  let [fontsLoaded] = useFonts(Fonts);
+
+  if (!fontsLoaded) {
+    return <AppLoading />
+  } else {
+    return (
+      <>
+        <NavBar />
+        <Index name='Rebisha' enthusiasmLevel={1} />
+      </>
+    )
+  }
+  
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+    // "@types/react-native": "0.63.4",
