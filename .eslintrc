@@ -1,0 +1,25 @@
+{
+    "extends": ["prettier/react", "eslint:recommended", "plugin:react/recommended"],
+    "rules": {
+        "max-lines": ["error", { "max": 200, "skipBlankLines": true }],
+        "comma-dangle": ["error", "always-multiline"],
+        "multiline-ternary": ["error", "always-multiline"]
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "plugins": ["prettier", "jsx-a11y", "react"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
