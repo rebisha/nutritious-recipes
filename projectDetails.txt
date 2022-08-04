@@ -1,0 +1,42 @@
+## Recipes ##
+
+__Sanity Schema__
+- Nutrients
+    nutrition: [
+        {
+            title: "Calories",
+            quantity: 456,
+            unit: "cals"
+        },
+        {
+            title: "Protein",
+            quantity: 39.67,
+            unit: "gm"
+        },
+        ...
+    ]
+
+- Ingredients
+    ingredient: [
+        {
+            title: "Tom yum paste",
+            quantity: 150,
+            unit: "gm"
+        },
+        {
+            title: "Red chilli, finely chopped",
+            quantity: 1,
+            unit: ""
+        }
+    ]
+
+- Recipes
+    recipe: [
+        {
+            title: "Tom yum soup",
+            serve: 2,
+            nutrients: nutrition,
+            ingredients: ingredient,
+            method: [{"Lorem ipsum dolor et.", "Lorem ipsum doloe et", ... }]
+        }
+    ]
